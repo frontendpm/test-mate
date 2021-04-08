@@ -1,0 +1,36 @@
+@import "../variables";
+
+.insights-articleList {
+    @include transform(translateY(10px));
+    opacity: 100;
+  
+    .articleList-article p {
+      color: #000;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 22px;
+      
+      a {
+        color: $color--grey6;  
+        text-transform: underline;
+      }
+    }
+
+    .articleList-article {
+        border: 1px solid $color--insights-articlelist--border;
+        border-left: 0;
+        flex: 1 0 30%;
+        max-width: 33.3%;
+        box-sizing: content-box;
+
+        @include respond-to(tablet) {
+            flex: 1 0 45%;
+            max-width: 50%;
+        }
+
+        @include respond-to(mobile) {
+            flex: 1 0 95%;
+            max-width: 100vw;
+        }
+    }
+}
