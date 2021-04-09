@@ -33,7 +33,7 @@ const StatusIcon = ({
   
   if(status === 'IN_PROGRESS') {
     sizeProp = { size: iconSizes[size] };
-  else {
+  }else {
     sizeProp = { fontSize: size }
   }
 
